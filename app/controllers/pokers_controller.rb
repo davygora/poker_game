@@ -1,0 +1,2 @@
+class PokersController < ApplicationController
+end
