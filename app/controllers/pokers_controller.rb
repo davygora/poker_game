@@ -13,5 +13,6 @@ class PokersController < ApplicationController
       redirect_to pokers_path
     else
       redirect_to root_path, notice: 'Вы не можете подписаться на эту игру!'
+    end
   end
 end
