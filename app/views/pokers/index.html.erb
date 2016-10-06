@@ -1,0 +1,29 @@
+  <h1 class="text-center">Welcome to online Poker Game</h1>
+  <h4 class="text-center">Please, choose some tables and subscribe</h4>
+  <%= form_tag subscribe_pokers_path, :method => :put do %>
+    <div class="row text-center">
+    <% for poker in @unsubscribe_pokers do %>
+      <div class="col-md-3 col-sm-6 hero-feature">
+          <div class="thumbnail">
+              <div class="caption">
+                  <h3><%= poker.name %></h3>
+                  <h4><%= poker.start_time %></h4>
+                  <label><%= check_box_tag "poker_ids[]", poker.id %>Select</label>
+              </div>
+          </div>
+      </div>
+    <% end %>
+    <%= submit_tag "Subscribe" %>
+  <% end %>
+</div>
+<h1 class="text-center">You subscribe at</h1>
+<% for poker in @subscribe_pokers do %>
+  <div class="col-md-3 col-sm-6 hero-feature">
+      <div class="thumbnail">
+          <div class="caption">
+              <h3><%= poker.name %></h3>
+              <h4><%= poker.start_time %></h4>
+          </div>
+      </div>
+  </div>
+<% end %>
