@@ -6,9 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+ <body>
+    <%= render 'shared/navbar' %>
+    <%= bootstrap_flash %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class=".col-md-8">
+          <%= yield %>
+       </div>
+      </div><!--/row-->
+      <footer class="footer">
+        <div class="panel-footer">
+          <p class="text-muted text-center">
+            by <a href="https://github.com/davygora">@davygora for Diversido Mobile</a>
+          </p>
+        </div>
+      </footer>
+    </div> <!-- /container -->
+  </body>
 </html>
