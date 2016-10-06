@@ -8,6 +8,7 @@
               <div class="caption">
                   <h3><%= poker.name %></h3>
                   <h4><%= poker.start_time %></h4>
+                  <h5>Players:<%= poker.user.count %></h5>
                   <label><%= check_box_tag "poker_ids[]", poker.id %>Select</label>
               </div>
           </div>
