@@ -8,11 +8,8 @@ class PokersController < ApplicationController
   end
 
   def subscribe
-    if @unsubscribe_pokers.subscribed?
-      Poker.update_all(subscribe_at: Time.now, id: params[:poker_ids])
+    @pokers = Poker.where(id: params[:poker_ids])
+    @pokers.update_all(subscribe_at: Time.now)
       redirect_to pokers_path
-    else
-      redirect_to root_path, notice: 'Вы не можете подписаться на эту игру!'
-    end
   end
 end
