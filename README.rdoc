@@ -9,7 +9,14 @@ Things you may want to cover:
 
 * Rails version 4.2.6
 
-* How to run the test suite
+<b>User can:</b>
+  *signup
+  *login
+  *logout
+  *select tables and subscribe
+
+<b>Admin</b> can:
+  *CRUD methods for users and pokers tables.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
