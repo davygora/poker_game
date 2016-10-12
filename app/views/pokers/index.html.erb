@@ -8,8 +8,12 @@
               <div class="caption">
                   <h3><%= poker.name %></h3>
                   <h4><%= poker.start_time %></h4>
-                  <h5>Players:<%= poker.user.count %></h5>
-                  <label><%= check_box_tag "poker_ids[]", poker.id %>Select</label>
+                  <% if poker.max_players < 6 %>
+                    <label><%= check_box_tag 'poker_ids[]', poker.id %>Select</label>
+                  <% else %>
+                    <h4>You can't subscribe</h4>
+                    <% end %>
+                  <h5><%= poker.max_players %></h5>
               </div>
           </div>
       </div>
